@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="p7.Admin.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a8b56cb52b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+      
+        #txtComment {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+
+            <div class="wrapper d-flex align-items-stretch">
+                <nav id="sidebar" class="elevation-4" style="background-color: #333333; box-shadow: inherit">
+
+
+                    <div class="p-4 pt-5">
+                        <img  src="/images\\GLOBE.png"  style="width:120px;height:120px;margin-left:50px;"/>
+                        <hr />
+<%--                        <h3 style="text-align: center; color: #F3F5F9;padding-top:40px ">HELLO Admin </h3>--%>
+                        <br />
+                        <ul class="list-unstyled components mb-5">
+                            <li runat="server">
+                                
+                                <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click" >
+                                    <div id="Div2" runat="server">statistics</div>
+                                </asp:LinkButton>
+
+                            </li>
+                            <li runat="server">
+                                
+                                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">
+                                    <div id="e1" runat="server">Patients</div>
+                                </asp:LinkButton>
+
+                            </li>
+                            <li runat="server">
+                                <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">
+                                    <div id="e2" runat="server">Services</div>
+                                </asp:LinkButton>
+                            </li>
+                            <li>
+                                <asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">
+                                    <div id="Div4" runat="server">Review</div>
+                                </asp:LinkButton>
+
+                            </li>
+                            <li>
+                                <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">
+                                    <div id="Div1" runat="server">Reservations</div>
+                                </asp:LinkButton>
+                            </li>
+                                                   </ul>
+
+                    </div>
+                </nav>
+
+                <div id="content"  style="display:block">
+
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+                            <button type="button" id="sidebarCollapse" class="btn btn-primary" style="background-color:white;font-weight:bold">
+                                <i class="fa-solid fa-bars" style="color: #333333"></i>
+                            </button>
+                             <a class="nav-link active" aria-current="page" href="/Default.aspx" style="margin-left:85%;font-weight:bold;color: black"">Home</a>
+                           
+                            </div>
+                    </nav>
+                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+               
+                </div>
+                
+          
+            
+            </div>
+            
+        </div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+     
+    </form>
+</body>
+</html>
